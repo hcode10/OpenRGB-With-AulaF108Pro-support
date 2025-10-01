@@ -806,3 +806,13 @@ macx:contains(QMAKE_HOST.arch, x86_64) {
 DISTFILES += \
     debian/openrgb-udev.postinst \
     debian/openrgb.postinst
+
+
+win32:msvc {
+    CONFIG += c++17
+    INCLUDEPATH += C:/vcpkg/installed/x64-windows/include
+    LIBS += C:/vcpkg/installed/x64-windows/lib/hidapi.lib
+    LIBS += C:/vcpkg/installed/x64-windows/lib/libusb-1.0.lib
+    # libs système requises par HIDAPI côté Windows
+    LIBS += Setupapi.lib Hid.lib Cfgmgr32.lib
+}
