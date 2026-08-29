@@ -80,9 +80,9 @@ void RGBController_AulaF108Pro::SetupZones()
     zone keyboard_zone;
     keyboard_zone.name          = "Keyboard";
     keyboard_zone.type          = ZONE_TYPE_MATRIX;
-    keyboard_zone.leds_min      = 98;
-    keyboard_zone.leds_max      = 98;
-    keyboard_zone.leds_count    = 98;
+    keyboard_zone.leds_min      = 104;
+    keyboard_zone.leds_max      = 104;
+    keyboard_zone.leds_count    = 104;
 
     keyboard_zone.matrix_map    = new matrix_map_type;
     keyboard_zone.matrix_map->height = 6;
@@ -96,7 +96,7 @@ void RGBController_AulaF108Pro::SetupZones()
     }
 
     // Create LEDs and populate matrix
-    for(unsigned int led_idx = 0; led_idx < 98; led_idx++)
+    for(unsigned int led_idx = 0; led_idx < 104; led_idx++)
     {
         led new_led;
         new_led.name  = led_names[led_idx];
